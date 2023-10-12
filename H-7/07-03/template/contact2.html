@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact List</title>
+</head>
+<body>
+    <h1>Contact List</h1>
+    <ul>
+    {{range .}}
+        <li>Name: {{.Name}}, Location: {{.Location}}, Email: {{.Email}}</li>
+    {{end}}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form JSON</title>
+</head>
+<body>
+	<form method="POST">
+		<label for="name">Nama:</label>
+		<input type="text" id="name" name="name" required><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br>
+		<label for="message">Pesan:</label><br>
+		<textarea id="message" name="message" required></textarea><br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<h2>Data yang telah diinput:</h2>
+	<ul>
+		{{ range . }}
+		<li>
+			Nama: {{ .Name }}<br>
+			Email: {{ .Email }}<br>
+			Pesan: {{ .Message }}
+		</li>
+		{{ end }}
+	</ul>
+</body>
+</html>
